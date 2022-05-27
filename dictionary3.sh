@@ -1,11 +1,11 @@
 #!/bin/bash -x
 
 declare -A roll
-dice=$(( RANDOM%7 ))
+
 
 for(( count=0; count<=10; count++ ))
 do
-
+dice=$(( RANDOM%7 ))
 roll[dice]=$count
 
 done

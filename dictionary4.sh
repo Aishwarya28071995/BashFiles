@@ -1,12 +1,15 @@
 #!/bin/bash -x
 
-declar -A month
+declare -A monthDictionary
 
-for (( counter=1; counter<=12; counter++ ))
+for (( counter=1; counter<=50; counter++ ))
 do
-empRollNum=$(( RANDOM%51 ))
-roll[counter]=$empRollNum
-echo ${roll[counter]}
+month=$(( RANDOM%12 ))
+monthDictionary[$counter]=$month
+done
 
-
+length=${#monthDictionary[@]}
+for (( index=0; index<=length; index++ ))
+do
+echo ${monthDictionary[$index]}
 done
